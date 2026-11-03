@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand palette */
+  --color-coconut-50: #fdf8ec;
+  --color-coconut-100: #faeecb;
+  --color-coconut-200: #f3dd9c;
+  --color-coconut-300: #ecc766;
+  --color-coconut-400: #e4ae3e;
+  --color-coconut-500: #d9a441; /* golden coconut — primary */
+  --color-coconut-600: #b9822c;
+  --color-coconut-700: #946325;
+  --color-coconut-800: #784f24;
+  --color-coconut-900: #654221;
+
+  --color-forest-50: #eef3ee;
+  --color-forest-100: #d3e0d4;
+  --color-forest-200: #a7c1aa;
+  --color-forest-300: #78a07d;
+  --color-forest-400: #4f7e57;
+  --color-forest-500: #355f3d;
+  --color-forest-600: #2c4a37; /* deep forest — secondary */
+  --color-forest-700: #223a2c;
+  --color-forest-800: #1a2d22; /* deep green — text/ink */
+  --color-forest-900: #10201b;
+
+  --color-cream-50: #fffdf8;
+  --color-cream-100: #fbf4e6; /* cream — base background */
+  --color-cream-200: #f6ead2;
+  --color-cream-300: #efdcb5;
+
+  --color-sand-100: #f1e6d0;
+  --color-sand-200: #e8dcc4; /* sand — surfaces, cards */
+  --color-sand-300: #ddcca4;
+  --color-sand-400: #cdb48a;
+
+  --background: var(--color-cream-100);
+  --foreground: var(--color-forest-800);
+}
+
+@theme inline {
+  /* Fonts */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  /* Color tokens exposed as Tailwind utilities, e.g. bg-coconut-500, text-forest-800 */
+  --color-coconut-50: var(--color-coconut-50);
+  --color-coconut-100: var(--color-coconut-100);
+  --color-coconut-200: var(--color-coconut-200);
+  --color-coconut-300: var(--color-coconut-300);
+  --color-coconut-400: var(--color-coconut-400);
+  --color-coconut-500: var(--color-coconut-500);
+  --color-coconut-600: var(--color-coconut-600);
+  --color-coconut-700: var(--color-coconut-700);
+  --color-coconut-800: var(--color-coconut-800);
+  --color-coconut-900: var(--color-coconut-900);
+
+  --color-forest-50: var(--color-forest-50);
+  --color-forest-100: var(--color-forest-100);
+  --color-forest-200: var(--color-forest-200);
+  --color-forest-300: var(--color-forest-300);
+  --color-forest-400: var(--color-forest-400);
+  --color-forest-500: var(--color-forest-500);
+  --color-forest-600: var(--color-forest-600);
+  --color-forest-700: var(--color-forest-700);
+  --color-forest-800: var(--color-forest-800);
+  --color-forest-900: var(--color-forest-900);
+
+  --color-cream-50: var(--color-cream-50);
+  --color-cream-100: var(--color-cream-100);
+  --color-cream-200: var(--color-cream-200);
+  --color-cream-300: var(--color-cream-300);
+
+  --color-sand-100: var(--color-sand-100);
+  --color-sand-200: var(--color-sand-200);
+  --color-sand-300: var(--color-sand-300);
+  --color-sand-400: var(--color-sand-400);
+
+  /* Semantic aliases used directly in markup */
+  --color-coconut: var(--color-coconut-500);
+  --color-forest: var(--color-forest-800);
+  --color-cream: var(--color-cream-100);
+  --color-sand: var(--color-sand-200);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Type scale (major third, 1.25) anchored at a 17px body */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.6;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.5;
+  --text-xl: 1.5625rem;
+  --text-xl--line-height: 1.35;
+  --text-2xl: 1.953rem;
+  --text-2xl--line-height: 1.25;
+  --text-3xl: 2.441rem;
+  --text-3xl--line-height: 1.15;
+  --text-4xl: 3.052rem;
+  --text-4xl--line-height: 1.1;
+  --text-5xl: 3.815rem;
+  --text-5xl--line-height: 1.05;
+
+  /* Spacing system (4px base, slightly expanded at the high end for generous section rhythm) */
+  --spacing-section-sm: 4rem;
+  --spacing-section: 6rem;
+  --spacing-section-lg: 9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-forest-900);
+    --foreground: var(--color-cream-100);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
