@@ -109,6 +109,15 @@
   --spacing-section-sm: 4rem;
   --spacing-section: 6rem;
   --spacing-section-lg: 9rem;
+
+  /* Animations */
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -116,10 +125,6 @@
     --background: var(--color-forest-900);
     --foreground: var(--color-cream-100);
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -132,4 +137,15 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
+}
+
+/* Animated drop-shadow for the GSAP-driven hero bottle: GSAP tweens the
+   custom properties directly so the shadow deepens in sync with rotateX. */
+.bottle-depth {
+  --shadow-blur: 24px;
+  --shadow-y: 28px;
+  --shadow-opacity: 0.2;
+  filter: drop-shadow(
+    0 var(--shadow-y) var(--shadow-blur) rgba(26, 45, 34, var(--shadow-opacity))
+  );
 }
